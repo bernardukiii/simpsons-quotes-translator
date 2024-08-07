@@ -2,7 +2,28 @@
     import data from '../data/simpsons-quotes.json'
 
     let results: any[] = $state([])
+    let character: any[] = $state([])
     
+    // API call to get specific character image
+    const loadCharacter = async (characterName: string) => {
+        console.log('character name: ', characterName)
+        const names = characterName.split(" ")
+        const firstName = names[0].toLocaleLowerCase()
+
+        if (firstName === 'homero') {
+            const translatedName = firstName.slice(0, -1)
+            const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${translatedName}`)
+            const str_res = await res.json()
+
+            return character = str_res
+        }
+
+        const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${firstName}`)
+        const str_res = await res.json()
+
+        return character = str_res
+    }
+
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
         console.log((e?.target as HTMLInputElement).value)
@@ -34,22 +55,39 @@
                 type='text'
                 placeholder='Llamaré a los borrachos'
                 name='phrase'
-                on:input={(e) => searchPhrase(e)}                
+                oninput={(e) => searchPhrase(e)}                
             >
-
-            {#each results as quotes, index}
+            {#if results.length === 1} 
                 <ul>
                     <li>
-                        <h3>{quotes.phrase}</h3>
-                        <p>{quotes.explanation}</p>
+                        <h3>{results[0].phrase}</h3>
+                        <p>{results[0].explanation}</p>
                         <div>
                             <h4>Quien dice:</h4>
-                            <p>{quotes.author}</p>
+                            <p>{results[0].author}</p>
                         </div>
+                        <button onclick={() => loadCharacter(results[0].author)}>Mostrar personaje</button>
+                        {#if character.length === 1}
+                            <!-- svelte-ignore a11y_img_redundant_alt -->
+                            <img alt="character-image" src={character[0]?.image} />
+                        {/if}
                     </li>
                 </ul>
-                
-            {/each}
+
+                {:else}
+                    {#each results as quotes, index}
+                    <ul>
+                        <li>
+                            <h3>{quotes.phrase}</h3>
+                            <p>{quotes.explanation}</p>
+                            <div>
+                                <h4>Quien dice:</h4>
+                                <p>{quotes.author}</p>
+                            </div>
+                        </li>
+                    </ul>
+                {/each}
+            {/if}
         </div>
     </section>
 </main>
