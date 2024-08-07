@@ -1,7 +1,7 @@
 <script lang="ts">
     import data from '../data/simpsons-quotes.json'
 
-    const results: any[] = []
+    let results: any[] = $state([])
     
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
@@ -11,17 +11,11 @@
             console.log('searching...')
 
             const cleanValue = searchValue.replace('/[\?!]/g', '').toLocaleLowerCase()
-
-            data.forEach((object) => {
-                const doesContain = object.phrase.includes(searchValue)
-
-                if (doesContain) {
-                    results.push(object)
-                    console.log(results)
-
-                    return results
-                }
-            }) 
+            
+            return results = data.filter(object => {
+                let phrase = object.phrase.toLowerCase();
+			    return phrase.includes(cleanValue.toLowerCase())
+            })
         }
     }
 </script>
