@@ -1,9 +1,28 @@
 <script lang="ts">
     import data from '../data/simpsons-quotes.json'
+
+    const results: any[] = []
     
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
         console.log((e?.target as HTMLInputElement).value)
+
+        if (searchValue.length > 0) {
+            console.log('searching...')
+
+            const cleanValue = searchValue.replace('/[\?!]/g', '').toLocaleLowerCase()
+
+            data.forEach((object) => {
+                const doesContain = object.phrase.includes(searchValue)
+
+                if (doesContain) {
+                    results.push(object)
+                    console.log(results)
+
+                    return results
+                }
+            }) 
+        }
     }
 </script>
 
@@ -24,7 +43,7 @@
                     on:input={(e) => searchPhrase(e)}                
                 >
 
-                {#each data as quotes, index}
+                {#each results as quotes, index}
                     <ul>
                         <li>
                             <h3>{quotes.phrase}</h3>
