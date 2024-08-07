@@ -3,8 +3,10 @@
 
     let results: any[] = $state([])
     
-    // API call to get character images
-
+    // API call to get specific character image
+    const loadCharacter = (characterName: string) => {
+        console.log('character name: ', characterName)
+    }
 
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
@@ -37,7 +39,7 @@
                 type='text'
                 placeholder='Llamaré a los borrachos'
                 name='phrase'
-                on:input={(e) => searchPhrase(e)}                
+                oninput={(e) => searchPhrase(e)}                
             >
             {#if results.length === 1} 
                 <ul>
@@ -48,7 +50,7 @@
                             <h4>Quien dice:</h4>
                             <p>{results[0].author}</p>
                         </div>
-                        <button>Mostrar personaje</button>
+                        <button on:click={() => loadCharacter(results[0].author)}>Mostrar personaje</button>
                     </li>
                 </ul>
 
