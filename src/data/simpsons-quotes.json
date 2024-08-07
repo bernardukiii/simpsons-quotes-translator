@@ -204,192 +204,236 @@
     "explanation": "Frase de Lisa cuando alguien hace algo injusto o cruel.",
     "author": "Lisa Simpson"
   },
-  // NO AUTHOR
   {
-    "phrase": "Esto es lo mas emocionante que he visto desde la guerra",
-    "explanation": "Frase del Abuelo Simpson usada para describir una situacion emocionante."
+    "phrase": "Esto es lo más emocionante que he visto desde la guerra",
+    "explanation": "Frase del Abuelo Simpson usada para describir una situación emocionante.",
+    "author": "Abuelo Simpson"
   },
   {
     "phrase": "Lo sé todo, soy un genio",
-    "explanation": "Frase de Homero cuando actua con confianza injustificada."
+    "explanation": "Frase de Homero cuando actúa con confianza injustificada.",
+    "author": "Homero Simpson"
   },
   {
-    "phrase": "¡Mejor olvidalo!",
-    "explanation": "Frase usada para indicar que algo no vale la pena."
+    "phrase": "¡Mejor olvídalo!",
+    "explanation": "Frase usada para indicar que algo no vale la pena.",
+    "author": "Varios personajes"
   },
   {
     "phrase": "¡Qué gran idea!",
-    "explanation": "Frase de Homero cuando aprueba una idea."
+    "explanation": "Frase de Homero cuando aprueba una idea.",
+    "author": "Homero Simpson"
   },
   {
     "phrase": "¡Ya cállate!",
-    "explanation": "Frase de Homero cuando quiere que alguien deje de hablar."
+    "explanation": "Frase de Homero cuando quiere que alguien deje de hablar.",
+    "author": "Homero Simpson"
   },
   {
-    "phrase": "Nunca subestimes el poder de la negacion",
-    "explanation": "Frase de Homero sobre el autoengano."
+    "phrase": "Nunca subestimes el poder de la negación",
+    "explanation": "Frase de Homero sobre el autoengaño.",
+    "author": "Homero Simpson"
   },
   {
     "phrase": "¡Eso es lo peor de lo peor!",
-    "explanation": "Otra frase de Mr. Burns para expresar extremo desagrado."
+    "explanation": "Otra frase de Mr. Burns para expresar extremo desagrado.",
+    "author": "Mr. Burns"
   },
   {
     "phrase": "A la grande le puse Cuca.",
-    "explanation": "Frase utilizada por Homero cuando quiere darle un nombre grandioso a algo común, generalmente para hacer una broma."
+    "explanation": "Frase utilizada por Homero cuando quiere darle un nombre grandioso a algo común, generalmente para hacer una broma.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "¡¿Alguien quiere pensar en los niños?!",
-      "explanation": "Expresión dramática de Helena Alegría, enfatizando la preocupación exagerada por los niños en cualquier situación."
+    "phrase": "¡¿Alguien quiere pensar en los niños?!",
+    "explanation": "Expresión dramática de Helen Lovejoy, enfatizando la preocupación exagerada por los niños en cualquier situación.",
+    "author": "Helen Lovejoy"
   },
   {
-      "phrase": "Tiene todo el dinero del mundo, pero hay algo que no puede comprar… Un dinosaurio.",
-      "explanation": "Homero destaca la idea de que algunas cosas son imposibles de obtener, sin importar cuánto dinero se tenga."
+    "phrase": "Tiene todo el dinero del mundo, pero hay algo que no puede comprar… Un dinosaurio.",
+    "explanation": "Homero destaca la idea de que algunas cosas son imposibles de obtener, sin importar cuánto dinero se tenga.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "¡No vives de ensalada!",
-      "explanation": "Una frase que Homero, Bart y Marge usan para justificar el consumo de alimentos más sustanciosos en lugar de solo ensalada."
+    "phrase": "¡No vives de ensalada!",
+    "explanation": "Una frase que Homero, Bart y Marge usan para justificar el consumo de alimentos más sustanciosos en lugar de solo ensalada.",
+    "author": "Homero Simpson, Bart Simpson, Marge Simpson"
   },
   {
-      "phrase": "El alcohol: la causa y la solución de todos los problemas de la vida.",
-      "explanation": "Homero reflexiona humorísticamente sobre el doble papel del alcohol en su vida."
+    "phrase": "El alcohol: la causa y la solución de todos los problemas de la vida.",
+    "explanation": "Homero reflexiona humorísticamente sobre el doble papel del alcohol en su vida.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Sin televisión y sin cerveza Homero pierde la cabeza.",
-      "explanation": "Homero expresa su dependencia de la televisión y la cerveza para mantener la cordura."
+    "phrase": "Sin televisión y sin cerveza Homero pierde la cabeza.",
+    "explanation": "Homero expresa su dependencia de la televisión y la cerveza para mantener la cordura.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "¿Te acuerdas de Alf? ¡Volvió! ¡En forma de fichas!",
-      "explanation": "Milhouse hace referencia a la popularidad de Alf, señalando su regreso en una forma diferente."
+    "phrase": "¿Te acuerdas de Alf? ¡Volvió! ¡En forma de fichas!",
+    "explanation": "Milhouse hace referencia a la popularidad de Alf, señalando su regreso en una forma diferente.",
+    "author": "Milhouse Van Houten"
   },
   {
-      "phrase": "Vas a morir, Moe. Wiiiiiii",
-      "explanation": "Homero bromea con Moe sobre un destino inminente de manera exagerada y sarcástica."
+    "phrase": "Vas a morir, Moe. Wiiiiiii",
+    "explanation": "Homero bromea con Moe sobre un destino inminente de manera exagerada y sarcástica.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "¿Dónde está mi hamburguesa?",
-      "explanation": "Homero demuestra su habitual obsesión por la comida rápida."
+    "phrase": "¿Dónde está mi hamburguesa?",
+    "explanation": "Homero demuestra su habitual obsesión por la comida rápida.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Es como si no llevara nada puesto ...nada puesto ...nada puesto.",
-      "explanation": "Ned Flanders muestra su incomodidad por la sensación de estar desnudo."
+    "phrase": "Es como si no llevara nada puesto ...nada puesto ...nada puesto.",
+    "explanation": "Ned Flanders muestra su incomodidad por la sensación de estar desnudo.",
+    "author": "Ned Flanders"
   },
   {
-      "phrase": "¡Momento! ¿La maestra de Bart se apellida Krabappel? ¡Yo le decia Clavados! ¿Por que nadie me lo dijo?, Debo haber parecido un idiota!",
-      "explanation": "Homero se da cuenta de su error y lo que revela su falta de atención y comprensión."
+    "phrase": "¡Momento! ¿La maestra de Bart se apellida Krabappel? ¡Yo le decía Clavados! ¿Por qué nadie me lo dijo?, Debo haber parecido un idiota!",
+    "explanation": "Homero se da cuenta de su error y lo que revela su falta de atención y comprensión.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "¿Qué te pasó, viejo? Antes eras chévere.",
-      "explanation": "Bart lamenta los cambios en alguien que solía considerar genial."
+    "phrase": "¿Qué te pasó, viejo? Antes eras chévere.",
+    "explanation": "Bart lamenta los cambios en alguien que solía considerar genial.",
+    "author": "Bart Simpson"
   },
   {
-      "phrase": "No lloren por mí. Ya estoy muerto.",
-      "explanation": "Barney Gómez usa el humor negro para hablar de su estado."
+    "phrase": "No lloren por mí. Ya estoy muerto.",
+    "explanation": "Barney Gómez usa el humor negro para hablar de su estado.",
+    "author": "Barney Gómez"
   },
   {
-      "phrase": "Es mi primer día.",
-      "explanation": "Homero se justifica de manera cómica cuando comete errores."
+    "phrase": "Es mi primer día.",
+    "explanation": "Homero se justifica de manera cómica cuando comete errores.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Sin la presencia de un hombre en la casa puedes volverte afeminado en un segundo. Ay, esta grasa no se quita.",
-      "explanation": "Homero teme perder su masculinidad sin la presencia de otro hombre."
+    "phrase": "Sin la presencia de un hombre en la casa puedes volverte afeminado en un segundo. Ay, esta grasa no se quita.",
+    "explanation": "Homero teme perder su masculinidad sin la presencia de otro hombre.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Les traigo paz.",
-      "explanation": "Montgomery Burns intenta engañar a la gente haciéndose pasar por un ser pacífico."
+    "phrase": "Les traigo paz.",
+    "explanation": "Montgomery Burns intenta engañar a la gente haciéndose pasar por un ser pacífico.",
+    "author": "Mr. Burns"
   },
   {
-      "phrase": "Niños: Hicieron su esfuerzo y fracasaron miserablemente. La lección es: nunca se esfuercen.",
-      "explanation": "Homero da una lección pesimista y cómica sobre el fracaso."
+    "phrase": "Niños: Hicieron su esfuerzo y fracasaron miserablemente. La lección es: nunca se esfuercen.",
+    "explanation": "Homero da una lección pesimista y cómica sobre el fracaso.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "En un momento así, solo se puede reír.",
-      "explanation": "Marge encuentra humor en situaciones difíciles."
+    "phrase": "En un momento así, solo se puede reír.",
+    "explanation": "Marge encuentra humor en situaciones difíciles.",
+    "author": "Marge Simpson"
   },
   {
-      "phrase": "Siempre dudé de la existencia de Dios. Ahora sé que existe, soy yo.",
-      "explanation": "Homero bromea sobre su ego al descubrir algo inesperado."
+    "phrase": "Siempre dudé de la existencia de Dios. Ahora sé que existe, soy yo.",
+    "explanation": "Homero bromea sobre su ego al descubrir algo inesperado.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Me gusta la cerveza fría, la tele fuerte y los homosexuales locas, locas si",
-      "explanation": "Homero enumera sus preferencias personales de una manera desenfadada."
+    "phrase": "Me gusta la cerveza fría, la tele fuerte y los homosexuales locas, locas si",
+    "explanation": "Homero enumera sus preferencias personales de una manera desenfadada.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Plan dental... Lisa necesita frenos.",
-      "explanation": "Homero se da cuenta de una responsabilidad familiar importante de manera simple."
+    "phrase": "Plan dental... Lisa necesita frenos.",
+    "explanation": "Homero se da cuenta de una responsabilidad familiar importante de manera simple.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Ahora vamos a solucionar nuestros problemas con un gran platón de helado de vainilla.",
-      "explanation": "Marge propone una solución dulce y sencilla para problemas familiares."
+    "phrase": "Ahora vamos a solucionar nuestros problemas con un gran platón de helado de vainilla.",
+    "explanation": "Marge propone una solución dulce y sencilla para problemas familiares.",
+    "author": "Marge Simpson"
   },
   {
-      "phrase": "Mi Homero no es comunista. Podrá ser mentiroso, puerco, idiota, comunista, pero nunca una estrella de porno.",
-      "explanation": "Abe Simpson defiende a su hijo de manera confusa y cómica."
+    "phrase": "Mi Homero no es comunista. Podrá ser mentiroso, puerco, idiota, comunista, pero nunca una estrella de porno.",
+    "explanation": "Abe Simpson defiende a su hijo de manera confusa y cómica.",
+    "author": "Abuelo Simpson"
   },
   {
-      "phrase": "El matrimonio es igual que una naranja. Primero está la piel, luego la dulce, dulce pulpa.",
-      "explanation": "Homero compara el matrimonio con una naranja, resaltando sus fases."
+    "phrase": "El matrimonio es igual que una naranja. Primero está la piel, luego la dulce, dulce pulpa.",
+    "explanation": "Homero compara el matrimonio con una naranja, resaltando sus fases.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Hable más fuerte que tengo una toalla.",
-      "explanation": "Homero usa una excusa absurda para no escuchar bien."
+    "phrase": "Hable más fuerte que tengo una toalla.",
+    "explanation": "Homero usa una excusa absurda para no escuchar bien.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Lisa, los vampiros son seres inventados, como los duendes, los gremlins y los esquimales.",
-      "explanation": "Homero hace una lista de seres ficticios incluyendo un grupo real por error."
+    "phrase": "Lisa, los vampiros son seres inventados, como los duendes, los gremlins y los esquimales.",
+    "explanation": "Homero hace una lista de seres ficticios incluyendo un grupo real por error.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Normalmente no rezo, pero si estás ahí­, por favor, ¡sálvame Superman!",
-      "explanation": "Homero pide ayuda de manera cómica y desesperada a un superhéroe."
+    "phrase": "Normalmente no rezo, pero si estás ahí­, por favor, ¡sálvame Superman!",
+    "explanation": "Homero pide ayuda de manera cómica y desesperada a un superhéroe.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Los viejos no necesitan amor, tienen que ser aislados y estudiados para ver qué nutrientes se les pueden sacar para nuestro beneficio personal.",
-      "explanation": "Homero muestra una actitud utilitaria y humorísticamente cruel hacia los ancianos."
+    "phrase": "Los viejos no necesitan amor, tienen que ser aislados y estudiados para ver qué nutrientes se les pueden sacar para nuestro beneficio personal.",
+    "explanation": "Homero muestra una actitud utilitaria y humorísticamente cruel hacia los ancianos.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Trabajo mucho y quiero a mis hijos, ¿por qué voy a pasar la mitad del domingo oyendo que me voy a ir al infierno?",
-      "explanation": "Homero cuestiona la necesidad de asistir a la iglesia dado su esfuerzo y amor familiar."
+    "phrase": "Trabajo mucho y quiero a mis hijos, ¿por qué voy a pasar la mitad del domingo oyendo que me voy a ir al infierno?",
+    "explanation": "Homero cuestiona la necesidad de asistir a la iglesia dado su esfuerzo y amor familiar.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "No vayas a decir que es un bar ¿Pero qué más abre a esa hora? Es una tienda de pornografía, estaba comprando pornografía. Jejejeje, que buenas ideas tengo.",
-      "explanation": "Homero intenta justificar una mentira con otra más absurda."
+    "phrase": "No vayas a decir que es un bar ¿Pero qué más abre a esa hora? Es una tienda de pornografía, estaba comprando pornografía. Jejejeje, que buenas ideas tengo.",
+    "explanation": "Homero intenta justificar una mentira con otra más absurda.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Yuju, ya soy universitario. ya no necesito el diploma de la escuela secundaria. Soy intelectual, muy inteligente. Soy intelectual, muy inteligente, hay que bonito soy.",
-      "explanation": "Homero celebra su admisión universitaria de manera repetitiva y absurda."
+    "phrase": "Yuju, ya soy universitario. ya no necesito el diploma de la escuela secundaria. Soy intelectual, muy inteligente. Soy intelectual, muy inteligente, hay que bonito soy.",
+    "explanation": "Homero celebra su admisión universitaria de manera repetitiva y absurda.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Bart no quiero asustarte pero tal vez el Coco, el Coco esta en la casa.",
-      "explanation": "Homero intenta asustar a Bart de manera exagerada con una criatura ficticia."
+    "phrase": "Bart no quiero asustarte pero tal vez el Coco, el Coco esta en la casa.",
+    "explanation": "Homero intenta asustar a Bart de manera exagerada con una criatura ficticia.",
+    "author": "Homero Simpson"
   },
   {
-      "phrase": "Si yo me muriera, reencarnarí­a en mariposa, nadie sospecharí­a de una mariposa.",
-      "explanation": "Bart hace una reflexión absurda sobre la reencarnación."
+    "phrase": "Si yo me muriera, reencarnarí­a en mariposa, nadie sospecharí­a de una mariposa.",
+    "explanation": "Bart hace una reflexión absurda sobre la reencarnación.",
+    "author": "Bart Simpson"
   },
   {
-      "phrase": "Oye, Otto, ¡tengo un examen hoy y no estoy listo! ¿Podrías estrellar el autobús o algo?",
-      "explanation": "Bart pide a Otto una excusa drástica para evitar un examen."
+    "phrase": "Oye, Otto, ¡tengo un examen hoy y no estoy listo! ¿Podrías estrellar el autobús o algo?",
+    "explanation": "Bart pide a Otto una excusa drástica para evitar un examen.",
+    "author": "Bart Simpson"
   },
   {
-      "phrase": "Lisa, tu tienes la inteligencia para llegar hasta donde quieras. Y cuando llegues, yo estaré contigo para pedirte prestado.",
-      "explanation": "Bart anima a Lisa, señalando cómicamente que se aprovechará de su éxito."
+    "phrase": "Lisa, tu tienes la inteligencia para llegar hasta donde quieras. Y cuando llegues, yo estaré contigo para pedirte prestado.",
+    "explanation": "Bart anima a Lisa, señalando cómicamente que se aprovechará de su éxito.",
+    "author": "Bart Simpson"
   },
   {
-      "phrase": "Vive deprisa, muere joven y deja un cadáver obeso.",
-      "explanation": "Bart ofrece un consejo de vida de manera cómica y cínica."
+    "phrase": "Vive deprisa, muere joven y deja un cadáver obeso.",
+    "explanation": "Bart ofrece un consejo de vida de manera cómica y cínica.",
+    "author": "Bart Simpson"
   },
   {
-      "phrase": "No puedes esconderte de mí, paso 23 horas diarias aqui.",
-      "explanation": "Marge destaca su constante presencia en casa."
+    "phrase": "No puedes esconderte de mí, paso 23 horas diarias aqui.",
+    "explanation": "Marge destaca su constante presencia en casa.",
+    "author": "Marge Simpson"
   },
   {
-      "phrase": "Homero, me dijiste que no ibas a usar al muñeco para fingir tu muerte.",
-      "explanation": "Marge recuerda a Homero su promesa de no usar un muñeco para fingir su muerte."
+    "phrase": "Homero, me dijiste que no ibas a usar al muñeco para fingir tu muerte.",
+    "explanation": "Marge recuerda a Homero su promesa de no usar un muñeco para fingir su muerte.",
+    "author": "Marge Simpson"
   },
   {
-      "phrase": "Tu padre es muy sensible a veces ¿Recuerdas cuando me reí de su gorra de Sherlock Holmes? Lloró una semana y cerró su agencia de detectives...",
-      "explanation": "Marge cuenta una anécdota sobre la sensibilidad extrema de Homero."
+    "phrase": "Tu padre es muy sensible a veces ¿Recuerdas cuando me reí de su gorra de Sherlock Holmes? Lloró una semana y cerró su agencia de detectives...",
+    "explanation": "Marge cuenta una anécdota sobre la sensibilidad extrema de Homero.",
+    "author": "Marge Simpson"
   },
-  // NO AUTHOR
   {
     "phrase": "¡Oh, no! ¡Elecciones! ¿Es uno de esos días en que cierran las tabernas, no es cierto?",
     "author": "Barney Gómez",
