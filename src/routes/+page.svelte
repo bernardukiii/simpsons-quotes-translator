@@ -2,10 +2,26 @@
     import data from '../data/simpsons-quotes.json'
 
     let results: any[] = $state([])
+    let character: any[] = $state([])
     
     // API call to get specific character image
-    const loadCharacter = (characterName: string) => {
+    const loadCharacter = async (characterName: string) => {
         console.log('character name: ', characterName)
+        const names = characterName.split(" ")
+        const firstName = names[0].toLocaleLowerCase()
+
+        if (firstName === 'homero') {
+            const translatedName = firstName.slice(0, -1)
+            const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${translatedName}`)
+            const str_res = await res.json()
+
+            return character = str_res
+        }
+
+        const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${firstName}`)
+        const str_res = await res.json()
+
+        return character = str_res
     }
 
     const searchPhrase = (e: Event) => {
@@ -50,7 +66,11 @@
                             <h4>Quien dice:</h4>
                             <p>{results[0].author}</p>
                         </div>
-                        <button on:click={() => loadCharacter(results[0].author)}>Mostrar personaje</button>
+                        <button onclick={() => loadCharacter(results[0].author)}>Mostrar personaje</button>
+                        {#if character.length === 1}
+                            <!-- svelte-ignore a11y_img_redundant_alt -->
+                            <img alt="character-image" src={character[0]?.image} />
+                        {/if}
                     </li>
                 </ul>
 
