@@ -8,14 +8,14 @@
         console.log((e?.target as HTMLInputElement).value)
 
         if (searchValue.length > 0) {
-            console.log('searching...')
-
             const cleanValue = searchValue.replace('/[\?!]/g', '').toLocaleLowerCase()
             
             return results = data.filter(object => {
                 let phrase = object.phrase.toLowerCase();
 			    return phrase.includes(cleanValue.toLowerCase())
             })
+        } else if (searchValue.length === 0) {
+            return results = []
         }
     }
 </script>
