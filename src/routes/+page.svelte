@@ -3,6 +3,9 @@
 
     let results: any[] = $state([])
     
+    // API call to get character images
+
+
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
         console.log((e?.target as HTMLInputElement).value)
@@ -36,20 +39,33 @@
                 name='phrase'
                 on:input={(e) => searchPhrase(e)}                
             >
-
-            {#each results as quotes, index}
+            {#if results.length === 1} 
                 <ul>
                     <li>
-                        <h3>{quotes.phrase}</h3>
-                        <p>{quotes.explanation}</p>
+                        <h3>{results[0].phrase}</h3>
+                        <p>{results[0].explanation}</p>
                         <div>
                             <h4>Quien dice:</h4>
-                            <p>{quotes.author}</p>
+                            <p>{results[0].author}</p>
                         </div>
+                        <button>Mostrar personaje</button>
                     </li>
                 </ul>
-                
-            {/each}
+
+                {:else}
+                    {#each results as quotes, index}
+                    <ul>
+                        <li>
+                            <h3>{quotes.phrase}</h3>
+                            <p>{quotes.explanation}</p>
+                            <div>
+                                <h4>Quien dice:</h4>
+                                <p>{quotes.author}</p>
+                            </div>
+                        </li>
+                    </ul>
+                {/each}
+            {/if}
         </div>
     </section>
 </main>
