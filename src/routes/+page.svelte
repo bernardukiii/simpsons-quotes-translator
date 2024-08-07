@@ -42,6 +42,10 @@
                     <li>
                         <h3>{quotes.phrase}</h3>
                         <p>{quotes.explanation}</p>
+                        <div>
+                            <h4>Quien dice:</h4>
+                            <p>{quotes.author}</p>
+                        </div>
                     </li>
                 </ul>
                 
