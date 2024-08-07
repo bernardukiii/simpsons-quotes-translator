@@ -1,6 +1,10 @@
-<script>
+<script lang="ts">
     import data from '../data/simpsons-quotes.json'
-
+    
+    const searchPhrase = (e: Event) => {
+        const searchValue = (e?.target as HTMLInputElement).value
+        console.log((e?.target as HTMLInputElement).value)
+    }
 </script>
 
 <main>
@@ -13,7 +17,13 @@
             </div>
 
             <div>
-                <!-- need an input field here -->
+                <input 
+                    type='text'
+                    placeholder='Llamaré a los borrachos'
+                    name='phrase'
+                    on:input={(e) => searchPhrase(e)}                
+                >
+
                 {#each data as quotes, index}
                     <ul>
                         <li>
