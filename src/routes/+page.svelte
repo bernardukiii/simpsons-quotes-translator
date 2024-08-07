@@ -9,10 +9,11 @@
 
         if (searchValue.length > 0) {
             const cleanValue = searchValue.replace('/[\?!]/g', '').toLocaleLowerCase()
-            
+            var normalizedValue = cleanValue.normalize('NFD').replace(/\p{Diacritic}/gu, '') // get rid of tildes in Spanish for example
+
             return results = data.filter(object => {
-                let phrase = object.phrase.toLowerCase();
-			    return phrase.includes(cleanValue.toLowerCase())
+                let phrase = object.phrase.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
+			    return phrase.includes(normalizedValue.toLowerCase())
             })
         } else if (searchValue.length === 0) {
             return results = []
