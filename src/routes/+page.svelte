@@ -40,12 +40,14 @@
     }
 </script>
 
-<main>
-    <section>
-        <div>
-            <h1>Bienvenidos al traductor de frases-meme de <strong>Los Simpsons</strong></h1>
-            <h4>Te pasa que no viste <strong>Los Simpsons</strong> y no entendés las referencias cuando la gente las usa en el día a día?</h4>
-            <p>Bueno, además de que te invita a formar parte de un club 'no vi los Simpsons en mi infancia', acá te dejo un buscador de frases-meme donde, si hago bien mi trabajo, te explica el contexto.</p>
+<main class="flex justify-center items-center w-full z-10">
+    <section class="w-1/2 h-full flex flex-col m-10 p-4">
+        <div class="bg-purple-300 flex flex-col justify-center items-center">
+            <h1 class="font-semibold text-3xl">Bienvenidos al traductor de frases-meme de <span class="text-yellow-300">Los Simpsons</span></h1>
+            <div class="text-xl p-4 m-2 flex flex-col text-center">
+                <h4 class="m-px">Te pasa que no viste <span class="text-yellow-300">Los Simpsons</span> y no entendés las referencias cuando la gente las usa en el día a día?</h4>
+                <p class="m-px">Bueno, además de que te invita a formar parte de un club 'no vi los Simpsons en mi infancia', acá te dejo un buscador de frases-meme donde, si hago bien mi trabajo, te explica el contexto.</p>
+            </div>
         </div>
 
         <div>
