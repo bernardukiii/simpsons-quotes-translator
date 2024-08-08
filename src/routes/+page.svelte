@@ -4,6 +4,7 @@
     let results: any[] = $state([])
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
+    let notFound: string = $state('Puede que el personaje que buscás esté de gira...')
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
@@ -14,6 +15,10 @@
         const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${firstName}`)
         const str_res = await res.json()
 
+        if (str_res.length === 0) {
+            return [notFound = `${characterName} está de gira, lo sentimos :( `, isLoading = false]
+        }
+        
         return [character = str_res, isLoading = false]
     }
 
@@ -30,7 +35,7 @@
 			    return phrase.includes(normalizedValue.toLowerCase())
             })
         } else if (searchValue.length === 0) {
-            return results = []
+            return [results = [], notFound = 'Puede que el personaje que buscás esté de gira...']
         }
     }
 </script>
@@ -66,6 +71,8 @@
                             <img alt="character-image" src={character[0]?.image} />
                         {:else if isLoading}
                             <span>Cargando imagen...</span>
+                        {:else}
+                            <span>{notFound}</span>
                         {/if}
                     </li>
                 </ul>
