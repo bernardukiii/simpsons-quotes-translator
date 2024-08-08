@@ -1,5 +1,6 @@
 <script lang="ts">
     import data from '../data/simpsons-quotes.json'
+    import { Button } from 'flowbite-svelte'
 
     let results: any[] = $state([])
     let character: any[] = $state([])
@@ -41,7 +42,7 @@
 </script>
 
 <main class="flex justify-center items-center w-full z-10">
-    <section class="w-1/2 h-full flex flex-col m-10 p-4 border-8 border-[#A17BBF] rounded-2xl bg-[#00b4ff]">
+    <section class="w-1/2 max-h-[50rem] overflow-hidden flex flex-col m-10 p-4 border-8 border-[#A17BBF] rounded-2xl bg-white">
         <div class="flex flex-col justify-center items-center font-semibold">
             <h1 class="font-semibold text-3xl">Bienvenidos al traductor de frases-meme de <span class="text-[#FFD90F]">Los Simpsons</span></h1>
             <div class="text-xl p-4 m-2 flex flex-col text-center">
@@ -50,7 +51,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center">
+        <div class="max-h-full overflow-hidden flex flex-col justify-center items-center">
             <!-- INPUT FIELD -->
             <div class="relative w-3/5 ">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -76,7 +77,11 @@
                             <h4 class="underline font-bold text-md mr-2">Quien dice:</h4>
                             <p class="text-md">{results[0]?.author}</p>
                         </div>
-                        <button onclick={() => loadCharacter(results[0]?.author)}>Mostrar personaje</button>
+                        <Button onclick={() => loadCharacter(results[0]?.author)} 
+                                class='text-lg font-bold'
+                                color='green'>
+                            Mostrar personaje
+                        </Button>
                         
                         {#if !isLoading && character.length === 1 && results[0]?.author === character[0]?.character}
                             <!-- svelte-ignore a11y_img_redundant_alt -->
@@ -90,7 +95,7 @@
                 </ul>
 
             {:else}
-                <ul class="w-1/2">
+                <ul class="w-1/2 h-full overflow-auto my-6">
                     {#each results as quotes, index}
                         <li class="p-4 flex flex-col justify-center items-center">
                             <h3 class="font-bold text-xl text-center mb-2">{quotes.phrase}</h3>
