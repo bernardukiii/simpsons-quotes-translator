@@ -10,14 +10,6 @@
         const names = characterName.split(" ")
         const firstName = names[0].toLocaleLowerCase()
 
-        if (firstName === 'homero') {
-            const translatedName = firstName.slice(0, -1)
-            const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${translatedName}`)
-            const str_res = await res.json()
-
-            return character = str_res
-        }
-
         const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${firstName}`)
         const str_res = await res.json()
 
@@ -60,14 +52,15 @@
             {#if results.length === 1} 
                 <ul>
                     <li>
-                        <h3>{results[0].phrase}</h3>
-                        <p>{results[0].explanation}</p>
+                        <h3>{results[0]?.phrase}</h3>
+                        <p>{results[0]?.explanation}</p>
                         <div>
                             <h4>Quien dice:</h4>
-                            <p>{results[0].author}</p>
+                            <p>{results[0]?.author}</p>
                         </div>
-                        <button onclick={() => loadCharacter(results[0].author)}>Mostrar personaje</button>
-                        {#if character.length === 1}
+                        <button onclick={() => loadCharacter(results[0]?.author)}>Mostrar personaje</button>
+                        
+                        {#if character.length === 1 && results[0]?.author === character[0]?.character}
                             <!-- svelte-ignore a11y_img_redundant_alt -->
                             <img alt="character-image" src={character[0]?.image} />
                         {/if}
