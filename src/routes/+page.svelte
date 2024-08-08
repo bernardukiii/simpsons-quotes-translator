@@ -41,7 +41,7 @@
 </script>
 
 <main class="flex justify-center items-center w-full z-10">
-        <section class="w-1/2 h-full flex flex-col m-10 p-4 border-8 border-[#A17BBF] rounded-2xl bg-[#00b4ff]">
+    <section class="w-1/2 h-full flex flex-col m-10 p-4 border-8 border-[#A17BBF] rounded-2xl bg-[#00b4ff]">
         <div class="flex flex-col justify-center items-center font-semibold">
             <h1 class="font-semibold text-3xl">Bienvenidos al traductor de frases-meme de <span class="text-[#FFD90F]">Los Simpsons</span></h1>
             <div class="text-xl p-4 m-2 flex flex-col text-center">
@@ -50,21 +50,31 @@
             </div>
         </div>
 
-        <div>
-            <input 
-                type='text'
-                placeholder='Llamaré a los borrachos'
-                name='phrase'
-                oninput={(e) => searchPhrase(e)}                
-            >
+        <div class="flex flex-col justify-center items-center">
+            <!-- INPUT FIELD -->
+            <div class="relative w-3/5 ">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="search" 
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 
+                                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 
+                                dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        placeholder="ej: Llamaré a los borrachos" 
+                        oninput={(e) => searchPhrase(e)}                
+                />
+            </div>
+            <!-- LIST OF QUOTES -->
             {#if results.length === 1} 
-                <ul>
-                    <li>
-                        <h3>{results[0]?.phrase}</h3>
-                        <p>{results[0]?.explanation}</p>
-                        <div>
-                            <h4>Quien dice:</h4>
-                            <p>{results[0]?.author}</p>
+                <ul class="w-full p-4 m-4">
+                    <li class="p-4 flex flex-col justify-center items-center">
+                        <h3 class="font-bold text-xl text-center mb-2">{results[0]?.phrase}</h3>
+                        <p class="text-lg text-start mb-4">{results[0]?.explanation}</p>
+                        <div class="flex items-center">
+                            <h4 class="underline font-bold text-md mr-2">Quien dice:</h4>
+                            <p class="text-md">{results[0]?.author}</p>
                         </div>
                         <button onclick={() => loadCharacter(results[0]?.author)}>Mostrar personaje</button>
                         
@@ -79,19 +89,19 @@
                     </li>
                 </ul>
 
-                {:else}
+            {:else}
+                <ul class="w-1/2">
                     {#each results as quotes, index}
-                    <ul>
-                        <li>
-                            <h3>{quotes.phrase}</h3>
-                            <p>{quotes.explanation}</p>
-                            <div>
-                                <h4>Quien dice:</h4>
-                                <p>{quotes.author}</p>
+                        <li class="p-4 flex flex-col justify-center items-center">
+                            <h3 class="font-bold text-xl text-center mb-2">{quotes.phrase}</h3>
+                            <p class="text-lg text-start mb-4">{quotes.explanation}</p>
+                            <div class="flex items-center">
+                                <h4 class="underline font-bold text-md mr-2">Quien dice:</h4>
+                                <p class="text-md">{quotes.author}</p>
                             </div>
                         </li>
-                    </ul>
-                {/each}
+                    {/each}
+                </ul>
             {/if}
         </div>
     </section>
