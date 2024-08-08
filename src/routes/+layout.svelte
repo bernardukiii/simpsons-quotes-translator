@@ -1,5 +1,5 @@
 <script>
-    // import "../app.css" # In case we need custom css
+    import "../app.css" // tailwind css
 
     // // Import the Analytics package, and the SvelteKit dev variable. // when we hook up to vercel later on for deployment
     // import { dev } from '$app/environment'
