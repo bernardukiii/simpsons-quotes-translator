@@ -3,17 +3,18 @@
 
     let results: any[] = $state([])
     let character: any[] = $state([])
+    let isLoading: boolean = $state(false)
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
-        console.log('character name: ', characterName)
+        isLoading = true
         const names = characterName.split(" ")
         const firstName = names[0].toLocaleLowerCase()
 
         const res = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${firstName}`)
         const str_res = await res.json()
 
-        return character = str_res
+        return [character = str_res, isLoading = false]
     }
 
     const searchPhrase = (e: Event) => {
@@ -60,9 +61,11 @@
                         </div>
                         <button onclick={() => loadCharacter(results[0]?.author)}>Mostrar personaje</button>
                         
-                        {#if character.length === 1 && results[0]?.author === character[0]?.character}
+                        {#if !isLoading && character.length === 1 && results[0]?.author === character[0]?.character}
                             <!-- svelte-ignore a11y_img_redundant_alt -->
                             <img alt="character-image" src={character[0]?.image} />
+                        {:else if isLoading}
+                            <span>Cargando imagen...</span>
                         {/if}
                     </li>
                 </ul>
