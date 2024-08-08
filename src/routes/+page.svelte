@@ -38,7 +38,7 @@
 			    return phrase.includes(normalizedValue.toLowerCase())
             })
         } else if (searchValue.length === 0) {
-            return [results = [], notFound = 'Puede que el personaje que buscás esté de gira...']
+            return [results = [], notFound = 'Puede que el personaje que buscás esté de gira...', character = [], visibility = '']
         }
     }
 </script>
@@ -75,12 +75,12 @@
                     <li class="p-4 flex flex-col justify-center items-center">
                         <h3 class="font-bold text-xl text-center mb-2">{results[0]?.phrase}</h3>
                         <p class="text-lg text-start mb-4">{results[0]?.explanation}</p>
-                        <div class="flex items-center">
+                        <div class="flex items-center mb-4">
                             <h4 class="underline font-bold text-md mr-2">Quien dice:</h4>
                             <p class="text-md">{results[0]?.author}</p>
                         </div>
                         <Button onclick={() => loadCharacter(results[0]?.author)} 
-                                class={`text-lg font-bold ${visibility}`}
+                                class={`text-lg font-bold m-4 ${visibility}`}
                                 color='green'>
                             Mostrar personaje
                         </Button>
@@ -89,9 +89,9 @@
                             <!-- svelte-ignore a11y_img_redundant_alt -->
                             <img width="200px" height="200px" alt="character-image" src={character[0]?.image} />
                         {:else if isLoading}
-                            <span>Cargando imagen...</span>
+                            <span class="font-bold">Cargando imagen...</span>
                         {:else}
-                            <span>{notFound}</span>
+                            <span class="font-bold">{notFound}</span>
                         {/if}
                     </li>
                 </ul>
@@ -102,7 +102,7 @@
                         <li class="p-4 flex flex-col justify-center items-center">
                             <h3 class="font-bold text-xl text-center mb-2">{quotes.phrase}</h3>
                             <p class="text-lg text-start mb-4">{quotes.explanation}</p>
-                            <div class="flex items-center">
+                            <div class="flex items-center mb-4">
                                 <h4 class="underline font-bold text-md mr-2">Quien dice:</h4>
                                 <p class="text-md">{quotes.author}</p>
                             </div>
