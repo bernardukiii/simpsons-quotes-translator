@@ -5,10 +5,12 @@
     let results: any[] = $state([])
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
+    let visibility: string = $state('')
     let notFound: string = $state('Puede que el personaje que buscás esté de gira...')
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
+        visibility = 'hidden'
         isLoading = true
         const names = characterName.split(" ")
         const firstName = names[0].toLocaleLowerCase()
@@ -69,7 +71,7 @@
             </div>
             <!-- LIST OF QUOTES -->
             {#if results.length === 1} 
-                <ul class="w-full p-4 m-4">
+                <ul class="w-1/2 p-4 m-4 overflow-auto">
                     <li class="p-4 flex flex-col justify-center items-center">
                         <h3 class="font-bold text-xl text-center mb-2">{results[0]?.phrase}</h3>
                         <p class="text-lg text-start mb-4">{results[0]?.explanation}</p>
@@ -78,14 +80,14 @@
                             <p class="text-md">{results[0]?.author}</p>
                         </div>
                         <Button onclick={() => loadCharacter(results[0]?.author)} 
-                                class='text-lg font-bold'
+                                class={`text-lg font-bold ${visibility}`}
                                 color='green'>
                             Mostrar personaje
                         </Button>
                         
                         {#if !isLoading && character.length === 1 && results[0]?.author === character[0]?.character}
                             <!-- svelte-ignore a11y_img_redundant_alt -->
-                            <img alt="character-image" src={character[0]?.image} />
+                            <img width="200px" height="200px" alt="character-image" src={character[0]?.image} />
                         {:else if isLoading}
                             <span>Cargando imagen...</span>
                         {:else}
