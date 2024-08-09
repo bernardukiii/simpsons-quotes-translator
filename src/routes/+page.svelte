@@ -1,6 +1,5 @@
 <script lang="ts">
     import { user } from '../stores'
-    import type { User } from 'firebase/auth'
     import { db } from '$lib/firebase/firebase'
     import { doc, getDoc, setDoc } from 'firebase/firestore'
     import data from '../data/simpsons-quotes.json'
