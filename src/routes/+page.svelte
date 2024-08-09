@@ -1,12 +1,31 @@
 <script lang="ts">
+    import { db } from '$lib/firebase/firebase'
+    import { doc, getDoc, setDoc } from 'firebase/firestore'
     import data from '../data/simpsons-quotes.json'
     import { Button, Spinner } from 'flowbite-svelte'
 
     let results: any[] = $state([])
+    let likes: number = $state(0)
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
     let visibility: string = $state('')
     let notFound: string = $state('Puede que el personaje que buscás esté de gira... 🎉 🍾')
+    
+    // Firebase call to retrieve the amount of likes from the DB
+    const getLikes = async () => {
+        const docRef = doc(db, 'likes', 'likeCount')
+        const docSnap = await getDoc(docRef)
+
+        if (docSnap.exists()) {
+            console.log('this is the data', docSnap.data())
+            likes = docSnap.data().count || 0
+        } else {
+            console.log('No such document.')
+        }
+    }
+
+    getLikes()
+    
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
