@@ -19,7 +19,6 @@
         const docSnap = await getDoc(docRef)
 
         if (docSnap.exists()) {
-            console.log('this is the data', docSnap.data())
             return likes = docSnap.data().count || 0
         } else {
             console.log('No such document.')
@@ -46,7 +45,6 @@
     // functions
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
-        console.log((e?.target as HTMLInputElement).value)
 
         if (searchValue.length > 0) {
             const cleanValue = searchValue.replace('/[\?!]/g', '').toLocaleLowerCase()
