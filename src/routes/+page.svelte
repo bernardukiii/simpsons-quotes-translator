@@ -3,12 +3,14 @@
     import { doc, getDoc, setDoc } from 'firebase/firestore'
     import data from '../data/simpsons-quotes.json'
     import { Button, Spinner } from 'flowbite-svelte'
+    import { ThumbsUpSolid } from 'flowbite-svelte-icons'
 
     let results: any[] = $state([])
     let likes: number = $state(0)
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
     let visibility: string = $state('')
+    let isLikesButtonVisible: boolean = $state(true)
     let notFound: string = $state('Puede que el personaje que buscás esté de gira... 🎉 🍾')
     
     // Firebase call to retrieve the amount of likes from the DB
@@ -18,14 +20,11 @@
 
         if (docSnap.exists()) {
             console.log('this is the data', docSnap.data())
-            likes = docSnap.data().count || 0
+            return likes = docSnap.data().count || 0
         } else {
             console.log('No such document.')
         }
-    }
-
-    getLikes()
-    
+    }  
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
@@ -44,6 +43,7 @@
         return [character = str_res, isLoading = false]
     }
 
+    // functions
     const searchPhrase = (e: Event) => {
         const searchValue = (e?.target as HTMLInputElement).value
         console.log((e?.target as HTMLInputElement).value)
@@ -60,9 +60,22 @@
             return [results = [], notFound = 'Puede que el personaje que buscás esté de gira... 🎉 🍾', character = [], visibility = '']
         }
     }
+
+    const addLike = async () => {
+        likes += 1
+        isLikesButtonVisible = false
+        const docRef = doc(db, 'likes', 'likeCount')
+        await setDoc(docRef, { count: likes })
+        // update UI count
+        getLikes()
+        
+    }
+
+    // call function so it executes
+    getLikes()
 </script>
 
-<main class="flex justify-center items-center w-full z-10">
+<main class="flex flex-col justify-between items-center w-full h-screen z-10">
     <section class="w-full max-h-[50rem] overflow-hidden flex flex-col m-2 p-2 border-8 border-[#A17BBF] rounded-2xl bg-white
                     2xl:w-1/2 2xl:m-10 2xl:p-4
                     xl:w-1/2  xl:m-10  xl:p-4
@@ -147,4 +160,17 @@
             {/if}
         </div>
     </section>
+
+    <footer class="w-full h-20 flex justify-end items-center sticky bottom-0 p-8">
+        <div class="flex justify-center items-center">
+            {#if isLikesButtonVisible}
+                <span class="text-2xl font-bold mr-4 text-white">Me gusta: { likes }</span>          
+                <Button outline={true} class="!p-2 border-4 hover:bg-blue-900" size="lg" onclick={() => addLike()}>
+                    <ThumbsUpSolid class="w-7 h-7 text-white" />
+                </Button>
+            {:else}
+                <span class="text-2xl font-bold mr-4 text-white">Me gusta: { likes }</span>
+            {/if}
+        </div>
+    </footer>
 </main>
