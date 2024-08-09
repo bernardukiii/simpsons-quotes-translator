@@ -24,4 +24,4 @@ signInAnonymously(auth)
     console.error('Error during anonymous sign-in:', error);
   });
 
-export { auth, db };
+export { auth, db, app }
