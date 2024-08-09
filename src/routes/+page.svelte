@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { user } from '../stores'
+    import type { User } from 'firebase/auth'
     import { db } from '$lib/firebase/firebase'
     import { doc, getDoc, setDoc } from 'firebase/firestore'
     import data from '../data/simpsons-quotes.json'
@@ -74,6 +76,10 @@
 </script>
 
 <main class="flex flex-col justify-between items-center w-full h-screen z-10">
+    <header class="w-full flex justify-end items-center">
+        <h2 class="font-bold text-xl p-2">guest_{ $user?.uid.slice(0, 3) }</h2>
+    </header>
+
     <section class="w-full max-h-[50rem] overflow-hidden flex flex-col m-2 p-2 border-8 border-[#A17BBF] rounded-2xl bg-white
                     2xl:w-1/2 2xl:m-10 2xl:p-4
                     xl:w-1/2  xl:m-10  xl:p-4
