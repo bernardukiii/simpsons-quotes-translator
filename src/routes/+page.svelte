@@ -5,31 +5,41 @@
     import data from '../data/simpsons-quotes.json'
     import { Button, Spinner } from 'flowbite-svelte'
     import { ThumbsUpSolid } from 'flowbite-svelte-icons'
+    import { onMount } from 'svelte'
 
     let results: any[] = $state([])
     let likes: number = $state(0)
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
     let visibility: string = $state('')
-    let isLikesButtonVisible: boolean = $state(true)
+    let isLikesButtonVisible: boolean = $state(false)
     let notFound: string = $state('Puede que el personaje que buscás esté de gira... 🎉 🍾')
     
+    onMount(() => {
+        if (typeof window !== undefined) {
+            const storedLocally = localStorage.getItem('canLike')
+            
+            if (storedLocally && storedLocally === 'false') {
+                return isLikesButtonVisible = false
+            } else {
+                return isLikesButtonVisible = true
+            }
+        }
+    })
+        
     // Firebase call to retrieve the amount of likes from the DB
-    const getLikes = async () => {
-        const storedLocally = localStorage.getItem('canLike')
+    const getLikes = async () => {       
         const docRef = doc(db, 'likes', 'likeCount')
         const docSnap = await getDoc(docRef)
-
-        if (storedLocally && storedLocally === 'false') {
-            return isLikesButtonVisible = false
-        }
 
         if (docSnap.exists()) {
             return likes = docSnap.data().count || 0
         } else {
             console.log('No such document.')
         }
-    }  
+    }
+    
+    getLikes()
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
@@ -76,8 +86,6 @@
         localStorage.setItem('canLike', 'false')
     }
 
-    // call function so it executes
-    getLikes()
 </script>
 
 <main class="flex flex-col justify-between items-center w-full h-screen z-10">
