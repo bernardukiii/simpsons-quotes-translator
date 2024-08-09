@@ -16,8 +16,13 @@
     
     // Firebase call to retrieve the amount of likes from the DB
     const getLikes = async () => {
+        const storedLocally = localStorage.getItem('canLike')
         const docRef = doc(db, 'likes', 'likeCount')
         const docSnap = await getDoc(docRef)
+
+        if (storedLocally && storedLocally === 'false') {
+            return isLikesButtonVisible = false
+        }
 
         if (docSnap.exists()) {
             return likes = docSnap.data().count || 0
@@ -67,7 +72,8 @@
         await setDoc(docRef, { count: likes })
         // update UI count
         getLikes()
-        
+        // save the like button visibility
+        localStorage.setItem('canLike', 'false')
     }
 
     // call function so it executes
