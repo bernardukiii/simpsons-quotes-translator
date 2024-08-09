@@ -49,7 +49,7 @@
             <h1 class="font-semibold text-3xl">Bienvenidos al traductor de frases-meme de <span class="text-[#FFD90F]">Los Simpsons</span></h1>
             <div class="text-xl p-4 m-2 flex flex-col text-center">
                 <h4 class="m-px">Te pasa que no viste <span class="text-[#FFD90F] font-bold">Los Simpsons</span> y no entendés las referencias cuando la gente las usa en el día a día?</h4>
-                <p class="m-px">Bueno, además de que te invita a formar parte de un club 'no vi los Simpsons en mi infancia', acá te dejo un buscador de frases-meme donde, si hago bien mi trabajo, te explica el contexto.</p>
+                <p class="m-px">Acá te dejo un buscador de frases-meme donde, si hice bien el trabajo, te explica el contexto.</p>
             </div>
         </div>
 
