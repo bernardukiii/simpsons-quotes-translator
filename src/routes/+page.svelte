@@ -1,20 +1,34 @@
 <script lang="ts">
+    import { user } from '../stores'
     import { db } from '$lib/firebase/firebase'
     import { doc, getDoc, setDoc } from 'firebase/firestore'
     import data from '../data/simpsons-quotes.json'
     import { Button, Spinner } from 'flowbite-svelte'
     import { ThumbsUpSolid } from 'flowbite-svelte-icons'
+    import { onMount } from 'svelte'
 
     let results: any[] = $state([])
     let likes: number = $state(0)
     let character: any[] = $state([])
     let isLoading: boolean = $state(false)
     let visibility: string = $state('')
-    let isLikesButtonVisible: boolean = $state(true)
+    let isLikesButtonVisible: boolean = $state(false)
     let notFound: string = $state('Puede que el personaje que buscás esté de gira... 🎉 🍾')
     
+    onMount(() => {
+        if (typeof window !== undefined) {
+            const storedLocally = localStorage.getItem('canLike')
+            
+            if (storedLocally && storedLocally === 'false') {
+                return isLikesButtonVisible = false
+            } else {
+                return isLikesButtonVisible = true
+            }
+        }
+    })
+        
     // Firebase call to retrieve the amount of likes from the DB
-    const getLikes = async () => {
+    const getLikes = async () => {       
         const docRef = doc(db, 'likes', 'likeCount')
         const docSnap = await getDoc(docRef)
 
@@ -23,7 +37,9 @@
         } else {
             console.log('No such document.')
         }
-    }  
+    }
+    
+    getLikes()
     
     // API call to get specific character image
     const loadCharacter = async (characterName: string) => {
@@ -66,14 +82,17 @@
         await setDoc(docRef, { count: likes })
         // update UI count
         getLikes()
-        
+        // save the like button visibility
+        localStorage.setItem('canLike', 'false')
     }
 
-    // call function so it executes
-    getLikes()
 </script>
 
 <main class="flex flex-col justify-between items-center w-full h-screen z-10">
+    <header class="w-full flex justify-end items-center">
+        <h2 class="font-bold text-xl p-2">invitado_{ $user?.uid.slice(0, 3) }</h2>
+    </header>
+
     <section class="w-full max-h-[50rem] overflow-hidden flex flex-col m-2 p-2 border-8 border-[#A17BBF] rounded-2xl bg-white
                     2xl:w-1/2 2xl:m-10 2xl:p-4
                     xl:w-1/2  xl:m-10  xl:p-4
