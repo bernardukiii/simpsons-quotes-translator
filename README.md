@@ -7,6 +7,7 @@
     <li>Svelte</li>
     <li>TypeScript</li>
     <li>TailwindCSS/Flowbite</li>
+    <li>Firebase</li>
 </ol>
 
 <h4>Notas adicionales</h4>
