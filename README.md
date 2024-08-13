@@ -1,18 +1,30 @@
-# create-svelte
+<h1>BDKI ~ Chequeador de frases de Los Simpsons</h1>
+<h3>Podés ingresar una frase de la emblemática serie animada para encontrar su uso y contexto, además de su autor</h3>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<p>Stack</p>
+<ol>
+    <li>PNPM</li>
+    <li>Svelte</li>
+    <li>TypeScript</li>
+    <li>TailwindCSS/Flowbite</li>
+    <li>Firebase</li>
+</ol>
 
-## Creating a project
+<h4>Notas adicionales</h4>
+<p>
+    La app surge como respuesta a que no ví Los Simpsons de chiquito y escucho que mucha gente en Argentina usa frases para hacer referencias que yo no entiendo. 
+    <br></br>
+    Aproveché la oportunidad para practicar mis, muy básicos, conocimientos de Svelte.
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<h4>PD:</h4>
+<p>
+    Si querés colaborar, cloná el repo y podés comenzar. Después vas a tener que abrir un PR (pull request) y deberá ser aprobada.
+</p>
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+
+
 
 ## Developing
 
@@ -34,5 +46,3 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
